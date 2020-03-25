@@ -1,5 +1,6 @@
 # Site settings
-title:          Arnau Manyosa-Plaza
+title:          "Arnau Manyosa-Plaza"
+tagline:        "Frontend Developer/UIUX Designer"
 description:    "Arnau Manyosa-Plaza Blog"
 baseurl:        "/blog"
 url:            "https://arnau.me/blog"

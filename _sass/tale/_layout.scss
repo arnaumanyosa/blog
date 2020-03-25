@@ -14,7 +14,7 @@ footer,
 }
 
 .nav {
-  box-shadow: 0 2px 2px -2px $shadow-color;
+  // box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
   margin: 1rem 0 5rem;
 
@@ -25,14 +25,16 @@ footer,
   }
 
   &-title {
-    @include transition(all .2s ease-out);
+    // @include transition(all .2s ease-out);
+    font-size: 16px;
     color: $default-color;
     display: inline-block;
     margin: 0;
     padding-right: .2rem;
 
-    &:hover,
-    &:focus {
+    .tagline {
+      font-weight: 400;
+      color: $default-color;
       opacity: .6;
     }
   }
@@ -48,7 +50,7 @@ footer,
     @include transition(all .2s ease-out);
     color: $default-color;
     display: inline-block;
-    opacity: .6;
+    // opacity: .6;
     padding: 0 2rem 0 0;
 
     &:last-child {
@@ -64,6 +66,7 @@ footer,
   a {
     color: $default-color;
     font-family: $sans-serif;
+    font-weight: 500;
   }
 }
 

@@ -5,7 +5,7 @@
 
 <body>
 
-  {% include navigation.html %}
+  {% include post_navigation.html %}
 
   {% if page.image %}
   <div class="post-image" style="background-image: url('{{ page.image }}');"></div>
@@ -13,7 +13,7 @@
 
   <main>
     <div class="post">
-      <h1 class="post-title">{{ page.title }}</h1>
+      <h2 class="post-title">{{ page.title }}</h2>
       <div class="post-info">
         <time datetime="{{ page.date }}" class="post-info-time">{{ page.date | date: "%B %d, %Y" }}</time>
         <span class="post-info-minutes">About {{ page.minutes }} minute read</span>

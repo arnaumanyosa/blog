@@ -9,7 +9,7 @@ layout: default
       {% if post.image %}
       <div class="catalogue-image" style="background-image: url('{{ post.image }}');"></div>
       {% endif %}
-      <h1 class="catalogue-title">{{ post.title }}</h1>
+      <h2 class="catalogue-title">{{ post.title }}</h2>
       <div class="catalogue-line"></div>
       <p>
         {{ post.content | strip_html | truncatewords: 30 }}
