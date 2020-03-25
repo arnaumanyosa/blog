@@ -15,10 +15,28 @@
     }
   }
 
+  &-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+
   &-time {
     color: $default-tint;
     font-family: $serif-secondary;
     letter-spacing: .5px;
+  }
+
+    &-minutes {
+    color: $default-tint;
+    font-family: $serif-secondary;
+    letter-spacing: .5px;
+
+    &:before {
+      content: '·';
+      margin-right: 3px;
+    }
   }
 
   &-title {
