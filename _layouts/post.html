@@ -1,39 +1,44 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="post">
-  <div class="post-info">
-    <span>Written by</span>
-    {% if page.author %}
-        {{ page.author }}
-    {% else %}
-        {{ site.author.name }}
-    {% endif %}
+{% include head.html %}
 
-    {% if page.date %}
-      <br>
-      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    {% endif %}
-  </div>
+<body>
 
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-line"></div>
+  {% include navigation.html %}
 
-  {{ content }}
-</div>
-
-{% if page.comments %}
-  {% include disqus_comments.html %}
-{% endif %}
-
-<div class="pagination">
-  {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
-  {% endif %}
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+  {% if page.image %}
+  <div class="post-image" style="background-image: url('{{ page.image }}');"></div>
   {% endif %}
 
-  <a href="#" class="top">Top</a>
-</div>
+  <main>
+    <div class="post">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-info">
+        <time datetime="{{ page.date }}" class="post-info-time">{{ page.date | date: "%B %d, %Y" }}</time>
+        <span class="post-info-minutes">About {{ page.minutes }} minute read</span>
+      </div>
+      <div class="post-line"></div>
+      {{ content }}
+    </div>
+
+    {% if page.comments %}
+    {% include disqus_comments.html %}
+    {% endif %}
+
+    <div class="pagination">
+      {% if page.next.url %}
+      <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+      {% endif %}
+      {% if page.previous.url %}
+      <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+      {% endif %}
+
+      <a href="#" class="top">Top</a>
+    </div>
+  </main>
+
+  {% include footer.html %}
+</body>
+
+</html>
