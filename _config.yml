@@ -1,7 +1,7 @@
 # Site settings
 title:          Tale
 description:    "Arnau Manyosa-Plaza Blog"
-baseurl:        ""
+baseurl:        "/blog"
 url:            "https://arnau.me/blog"
 
 # Google Analytics
